@@ -6,8 +6,10 @@
              mc:Ignorable="d"
              x:Class="ProjetXamarin.views.Header">
   <ContentView.Content>
-      <StackLayout>
-          <Label Text="Hello Xamarin.Forms!" />
-      </StackLayout>
-  </ContentView.Content>
+        <StackLayout Orientation="Horizontal" BackgroundColor="#58B0F0" Padding="10,25">
+            <ImageButton Source="pencil.png"  HorizontalOptions="CenterAndExpand" WidthRequest="25" BackgroundColor="Transparent"></ImageButton>
+            <Label Text="Accueil" TextColor="White" FontSize="20" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"/>
+            <ImageButton Source="search.png"  HorizontalOptions="CenterAndExpand" WidthRequest="25" BackgroundColor="Transparent"></ImageButton>
+        </StackLayout>
+    </ContentView.Content>
 </ContentView>

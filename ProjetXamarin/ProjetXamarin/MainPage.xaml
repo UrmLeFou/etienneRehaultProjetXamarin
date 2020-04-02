@@ -4,17 +4,19 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             xmlns:views="clr-namespace:ProjetXamarin.views"
              x:Class="ProjetXamarin.MainPage">
 
     <StackLayout>
         <!-- Place new controls here -->
-        <ContentView>
+        <!--<ContentView>
             <StackLayout Orientation="Horizontal" BackgroundColor="#58B0F0" Padding="10,25">
                 <ImageButton Source="pencil.png"  HorizontalOptions="CenterAndExpand" WidthRequest="25" BackgroundColor="Transparent"></ImageButton>
                 <Label Text="Accueil" TextColor="White" FontSize="20" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"/>
                 <ImageButton Source="search.png"  HorizontalOptions="CenterAndExpand" WidthRequest="25" BackgroundColor="Transparent"></ImageButton>
             </StackLayout>
-        </ContentView>
+        </ContentView>-->
+        <views:Header/>
         <ScrollView Orientation="Vertical" HorizontalOptions="Fill" VerticalOptions="FillAndExpand">
             <!-- Grid -->
             <StackLayout Orientation="Vertical">
@@ -40,14 +42,15 @@
                 </StackLayout>
             </StackLayout>
         </ScrollView>
-        <ContentView>
+        <views:Footer/>
+        <!--<ContentView>
             <StackLayout Orientation="Horizontal" BackgroundColor="White" HeightRequest="75">
                 <Label Text="Fil" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
                 <Label Text="Notifications" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
                 <Label Text="Message" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
                 <Label Text="Moi" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
             </StackLayout>
-        </ContentView>
+        </ContentView>-->
     </StackLayout>
 
 </ContentPage>
