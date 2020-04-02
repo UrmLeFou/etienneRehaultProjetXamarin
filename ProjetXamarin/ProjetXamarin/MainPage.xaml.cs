@@ -2,6 +2,7 @@
 using ProjetXamarin.services;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
@@ -22,10 +23,9 @@ namespace ProjetXamarin
             InitializeComponent();
             this.connectedButton.Clicked += Connection_Clicked;
             this.cacherErreur();
-            this.tweets.IsVisible = false;
         }
 
-        private void Connection_Clicked(object sender, EventArgs e)
+        private async void Connection_Clicked(object sender, EventArgs e)
         {
             Console.WriteLine("bouton cliqué");
 
@@ -60,9 +60,7 @@ namespace ProjetXamarin
 
             if (verification)
             {
-                this.formulaire.IsVisible = false;
-                List<Tweet> tweetsList = twitterService.GetTweets();
-                this.tweets.IsVisible = true;
+                await Navigation.PushAsync(new Twitter());
             }
             else
             {
